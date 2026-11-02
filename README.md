@@ -1,77 +1,79 @@
-41. Quantization Error 
+1. Basics of Digital Systems 
 
-Quantization error is the difference between the original sample and its quantized value. It happens because we use a limited number of levels. More bits give more levels and usually reduce the error. It is also called quantization noise. 
+A digital system processes information using digital signals. It works with binary numbers: 0 and 1. It receives input and gives output. Digital systems are accurate, reliable, and easy to use. They are used in computers, communication, audio, and image processing. 
 
-42. All-Pass Filters 
+2. Digital Systems Based on Computer Engineering Complexes 
 
-An all-pass filter allows all frequencies to pass. It does not change their magnitude, but it changes their phase. Its magnitude response is equal to one. It is used to control phase and group delay. 
+Digital systems use different computer parts. The main parts are the processor, memory, input devices, and output devices. The processor does calculations and logical operations. Memory stores data and instructions. Input devices send information, and output devices show results. 
 
-43. The Fourier Transform and Discrete Fourier Transform 
+3. Digital System and Its Fundamental Principles of Operation 
 
-The Fourier Transform changes a signal from the time domain to the frequency domain. DFT is used for digital signals with a limited number of samples. FFT is a faster method for calculating DFT. These methods help study signal frequencies. 
+A digital system receives an input and produces an output. The input is shown as x(n), and the output is y(n). It works with signals at specific time points. It can have one or more inputs and outputs. Its main purpose is to process information. 
 
-44. First-Order Notch Filter 
+4. Signal Reconstruction from Discrete Samples 
 
-A notch filter reduces a specific frequency in a signal. It helps remove unwanted noise and interference. The notch frequency is the frequency that is reduced the most. It is used in measurement and communication systems. 
+Signal reconstruction means changing discrete samples back into a continuous signal. An ideal low-pass filter can be used for this process. The sampling frequency must be at least twice the maximum signal frequency. If it is too low, aliasing happens. 
 
-45. Second-Order Unity Gain Resonator 
+5. Data Conversion and Quantization 
 
-A second-order resonator is a filter that increases a specific frequency. It has a second-order transfer function. Unity gain means the gain is equal to one. Its poles affect the resonant frequency and bandwidth. It is used in audio and communication systems. 
+Data conversion changes information from one form to another. It has three main steps: sampling, quantization, and encoding. Sampling takes signal values. Quantization gives each sample a fixed level. Encoding changes these levels into binary numbers. More bits give better accuracy. 
 
-46. State Space 
+6. Sample-and-Hold Circuits 
 
-State-space is a mathematical method used to describe a system. It uses input, output, and state variables. The state equation shows how the system changes over time. The output equation shows how the output depends on the input and state. It is used in control systems. 
+A sample-and-hold circuit takes a sample of an analog signal and keeps its value constant. It has two steps: sampling and holding. A capacitor stores the voltage. This circuit is used before an ADC. It helps make signal conversion more accurate. 
 
-47. Transformation of Random Signals in Discrete-Time Systems 
+7. Digital-to-Analog Conversion 
 
-A random signal is a signal that cannot be predicted exactly. Noise is an example. When it passes through a digital system, its properties can change. These properties include mean, variance, and autocorrelation. This topic is important in communication and signal processing. 
+Digital-to-analog conversion changes digital data into an analog signal. A DAC is used for this process. It changes binary numbers into voltage or current values. DACs are used in audio systems, communication devices, and digital controllers. 
 
-48. High-Pass Filters 
+8. Analog-to-Digital Conversion 
 
-A high-pass filter allows high frequencies to pass. It reduces low frequencies. The cutoff frequency separates the two parts. It is used to remove low-frequency noise and improve signal quality. 
+Analog-to-digital conversion changes an analog signal into digital data. An ADC is used for this process. It has three steps: sampling, quantization, and encoding. ADCs are used in microphones, cameras, and sensors. 
 
-49. Low-Pass Filters 
+9. Discretization of Continuous-Time Processes 
 
-A low-pass filter allows low frequencies to pass. It reduces high frequencies. The cutoff frequency separates the passband and stopband. It is used to remove high-frequency noise. Butterworth is a common type of low-pass filter. 
+Discretization changes a continuous-time signal into a discrete-time signal. It is done by sampling. A discrete signal has values only at specific time points. The sampling frequency shows how many samples are taken per second. A low sampling frequency can cause aliasing. 
 
-50. Band-Pass Filters 
+10. Reconstruction of Continuous Functions 
 
-A band-pass filter allows a specific range of frequencies to pass. It reduces frequencies below and above this range. It has two cutoff frequencies: lower and upper. The difference between them is called bandwidth. It is used in radio and communication systems. 
+Reconstruction means getting a continuous signal from discrete samples. Interpolation and low-pass filters can be used. The sampling frequency must be high enough. This process is important in audio and communication systems. 
 
-51. Relationship Between Sampling Frequency and Maximum Frequency 
+11. Fourier Transform 
 
-Sampling frequency is the number of samples taken per second. Maximum frequency is the highest frequency in a signal. According to the Nyquist theorem, the sampling frequency must be at least twice the maximum frequency. Fs>= 2f max If it is too low, aliasing happens. 
+The Fourier Transform changes a signal from the time domain to the frequency domain. It helps us see the frequencies inside a signal. It is used to find noise and study signals. DFT is used for digital signals, and FFT calculates DFT faster. 
 
-52. Nyquist Frequency, Aliasing, and Signal Reconstruction 
+12. Modified Z-Transform 
 
-Nyquist frequency is half of the sampling frequency. Aliasing happens when the sampling frequency is too low. It causes signal distortion. An anti-aliasing filter helps prevent this problem. Signal reconstruction changes discrete samples back into a continuous signal. 
+The Z-transform is used to study discrete-time signals and systems. It changes a signal into the z-domain. It makes mathematical calculations easier. It helps us study system behavior, poles, zeros, and stability. 
 
- 
+13. Analog Model of the Extrapolator 
 
-54. Fundamental Principles of Digital System Analysis 
+An extrapolator uses previous signal values to predict future values. It helps estimate what will happen next. A simple method keeps the last value constant. It is used in prediction and digital control systems. 
 
-Digital system analysis studies how a system works. It shows how a system changes input into output. Difference equations and the Z-transform are used for analysis. Engineers also study linearity, time invariance, causality, and stability. 
+14. Stable and Unstable Systems 
 
-55. Role of the Z-Transform in Analyzing Discrete-Time Systems 
+A system is stable if every bounded input gives a bounded output. This is called BIBO stability. If a bounded input gives an unlimited output, the system is unstable. Stable systems give safe and predictable results. 
 
-The Z-transform is used to study discrete-time signals and systems. It changes a signal into the z-domain. It makes calculations easier. It helps find transfer functions, poles, zeros, and system stability. 
+15. Design of Digital Filters – BIBO Stability 
 
-56. Linearity, Time Invariance, Causality, and Stability 
+A digital filter changes the frequency parts of a signal. It can remove unwanted noise. There are two main types: FIR and IIR. A filter is BIBO stable if every bounded input gives a bounded output. For a causal IIR filter, all poles must be inside the unit circle. 
 
-These are four important system properties.Linearity: The system follows addition and scaling rules.,Time invariance: The system works in the same way at any time.Causality: The output depends on present and past inputs, not future inputs. , Stability: Every bounded input gives a bounded output. 
+16. Stability of Discrete-Time Systems – Routh-Hurwitz Criterion 
 
-57. Effect of Poles and Zeros on Digital Systems 
+Stability shows if a system can give a bounded output. For a stable causal discrete-time system, all poles must be inside the unit circle. The Routh-Hurwitz method is mainly used for continuous-time systems. The Jury test is commonly used for discrete-time systems. 
 
-Zeros are the roots of the numerator. Poles are the roots of the denominator. They affect the frequency response of a system. Zeros can reduce some frequencies. Poles can increase the response near some frequencies. For a stable causal system, all poles must be inside the unit circle. 
+17. Sampling and Quantization – Convolution 
 
-58. Transfer Function of a Discrete-Time Digital System 
+Sampling changes a continuous signal into a discrete signal. Quantization gives each sample a fixed level. Convolution is a mathematical operation used to find the output of a system. It combines the input signal with the impulse response. It is widely used in digital filters. 
 
-A transfer function shows the relationship between input and output. It is written as H(z). It is the ratio of the output Z-transform to the input Z-transform. 
+18. Nyquist Criterion for Stability 
 
-Main formula: h(z)=y(z)/x(z) 
+The Nyquist criterion is used to check the stability of feedback systems. It uses a graph called the Nyquist plot. The important point is -1 + j0. The graph helps engineers understand if a system is stable. 
 
-Poles and zeros affect the system's response and stability. 
+19. Digital Controller – D/A Conversion 
 
-60. Relationship Between Transfer Function, Poles, Zeros, Stability, and Frequency Response 
+A digital controller controls a process using digital signals. It receives information from sensors and processes it. Then, a DAC changes its digital output into an analog signal. This signal controls motors, valves, and other devices. 
 
-The transfer function shows the relationship between input and output. Zeros are the roots of the numerator, and poles are the roots of the denominator. They affect the frequency response. Stability mainly depends on the poles. For a stable causal system, all poles must be inside the unit circle. These concepts help us understand and design digital systems. 
+20. Realization of Digital Systems – IIR Direct, Parallel and Cascaded Realizations 
+
+Realization means building a digital system using adders, multipliers, and delay elements. An IIR filter uses feedback. There are different forms: Direct Form I, Direct Form II, Cascade, and Parallel. They all can make the same filter, but their structures are different. 
